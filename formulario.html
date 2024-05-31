@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -31,25 +31,24 @@
 
     <div>
       <label for="edad">INGRESE SU EDAD: </label>
-      <input type="number" step="1" min="0" value="18" name="edad" id="edad">
+      <input type="text" step="1" min="0" value="18" name="edad" id="edad" pattern="[1-9]{1,3}">
     </div>
 
     <div>
-      <select name="hijos" id="hijos">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">MAS</option selected>
-      </select>
+      <label for="hijos">CANTIDAD DE HIJOS</label>
+      <input type="text" pattern="[0-9]{1,2}" name="hijos" id="hijos" required>
     </div>
 
     <div>
       <label for="telefono">INGRESE SU NUMERO DE TELEFONO: </label>
-      <input type="tel" name="telefono" id="telefono">
+      <input type="text" name="telefono" id="telefono" pattern="[0-9]{10}" required>
     </div>
 
     <div>
       <label for="email">INGRESE SU CORREO: </label>
-      <input type="email" name="correo" id="telefono">
+      <input type="text" name="correo" id="telefono"
+        pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+        required>
     </div>
 
     <div>
@@ -59,15 +58,12 @@
 
     <div>
       <label for="sexo">SELECCIONE SU SEXO: </label>
-      <input type="radio" name="sexo" value="Masculino"> Masculino
-      <input type="radio" name="sexo" value="Femenino">Femenino
+      <input type="text" name="sexo" id="sexo" pattern="masculino|femenino">
     </div>
 
     <div>
       <label for="Transporte">SELECCIONE LOS MEDIOS DE TRANSPORTE CON LOS CUALES CUENTA: </label>
-      <input type="checkbox" name="Transporte" value="Carro" checked>Carro
-      <input type="checkbox" name="Transporte" value="Moto">Moto
-      <input type="checkbox" name="Transporte" value="Bicicleta">Bicicleta
+      <input type="text" name="Transporte" pattern="carro|bicicleta|moto">
     </div>
 
     <div>
